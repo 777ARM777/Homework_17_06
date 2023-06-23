@@ -14,5 +14,5 @@ for i in string:
         dict[i] += 1
 
 dict = sorted(dict.items())
-for i in dict:
-    print(i[0], ': ', str(i[1]))
+for key, value in dict:
+    print(key, ': ', value)
