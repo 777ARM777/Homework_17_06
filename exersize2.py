@@ -4,8 +4,7 @@ def func1(dict):
     phone = int(input('Enter phone number:'))
     dict[name] = phone
     print('\nContact added successfully!')
-    return dict
-
+    
 
 def func2(dict):
     """Searches for a contact"""
@@ -16,8 +15,8 @@ def func2(dict):
 def func3(dict):
     """Lists all contacts"""
     print('Contacts')
-    for j in dict.items():
-        print(j[0], ': ', j[1])
+    for key, value in dict.items():
+        print(key, ': ', value)
 
 
 print('Phone Book Program\n-----------------\n1. Add a new contact')
@@ -26,7 +25,7 @@ d = {}
 while True:
     i = int(input('\nEnter your choice:'))
     if i == 1:
-        d = func1(d)
+        func1(d)
     elif i == 2:
         func2(d)
     elif i == 3:
